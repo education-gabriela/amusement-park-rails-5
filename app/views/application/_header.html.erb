@@ -2,13 +2,7 @@
   <div class="header item">
     Amusement Park on Rails 5
   </div>
-  <a class="item">
-    Home
-  </a>
-  <a class="item">
-    Sign Up
-  </a>
-  <a class="item">
-    Sign In
-  </a>
+  <%= link_to "Home", root_path, class: "item" %>
+  <%= link_to "Sign Up", signup_path, class: "item" %>
+  <%= link_to "Sign In", signin_path, class: "item" %>
 </div>

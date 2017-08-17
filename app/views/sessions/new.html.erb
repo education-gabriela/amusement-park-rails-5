@@ -1,0 +1,12 @@
+<h1 class="ui dividing header">Sign In</h1>
+<%= form_for :user, html: {class: "ui form"} do |f| %>
+    <div class="five wide field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="five wide field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <%= f.submit "Login", class: "ui primary submit button" %>
+<% end %>

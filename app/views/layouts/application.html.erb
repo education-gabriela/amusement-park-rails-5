@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AmusementPark5</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>AmusementPark5</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'semantic.min.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'semantic.min.css' %>
 
-    <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-    <%= javascript_include_tag 'semantic.min.js', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <%= javascript_include_tag 'semantic.min.js', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-  <div class="ui container">
-    <header>
-      <%= render partial: "header" %>
-    </header>
+<body>
+<div class="main ui container">
+  <header>
+    <%= render partial: "header" %>
+  </header>
+  <div class="ui segment">
     <%= yield %>
   </div>
-  </body>
+</div>
+</body>
 </html>
