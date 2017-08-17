@@ -1,0 +1,3 @@
+class Attraction < ApplicationRecord
+
+end
