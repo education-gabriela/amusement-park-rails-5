@@ -1,10 +1,10 @@
-<h1 class="ui dividing header">Create a new User</h1>
+<h1 class="ui dividing header">Sign In</h1>
 
 <% if flash[:message] %>
     <div class="ui red inverted segment"><%= flash[:message] %></div>
 <% end %>
 
-<%= form_for @user, html: {class: "ui form"} do |f| %>
+<%= form_for :user, url: users_path, html: {class: "ui form"} do |f| %>
     <div class="five wide field">
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -13,5 +13,25 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
     </div>
-    <%= f.submit "Login", class: "ui primary submit button" %>
+    <div class="five wide field">
+      <%= f.label :nausea %>
+      <%= f.number_field :nausea %>
+    </div>
+    <div class="five wide field">
+      <%= f.label :happiness %>
+      <%= f.number_field :happiness %>
+    </div>
+    <div class="five wide field">
+      <%= f.label :tickets %>
+      <%= f.number_field :tickets %>
+    </div>
+    <div class="five wide field">
+      <%= f.label :height %>
+      <%= f.number_field :height %>
+    </div>
+    <div class="inline field">
+      <%= f.label :admin %>
+      <%= f.check_box :admin, class: "ui checkbox" %>
+    </div>
+    <%= f.submit "Create User", class: "ui primary submit button" %>
 <% end %>
