@@ -14,6 +14,9 @@
     <%= render partial: "header" %>
   </header>
   <div class="ui segment">
+    <% if flash[:message] %>
+        <div class="ui red inverted segment"><%= flash[:message] %></div>
+    <% end %>
     <%= yield %>
   </div>
 </div>

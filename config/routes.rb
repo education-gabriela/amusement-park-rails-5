@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get "/signin", controller: "sessions", action: "new"
   post "/signin", controller: "sessions", action: "create"
   delete "/signout", controller: "sessions", action: "destroy"
+
+  post "/attractions/:id", controller: "attractions", action: "take_ride"
 end

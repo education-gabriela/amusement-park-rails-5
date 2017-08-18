@@ -1,9 +1,5 @@
 <h1 class="ui dividing header">Sign in</h1>
 
-<% if flash[:message] %>
-    <div class="ui red inverted segment"><%= flash[:message] %></div>
-<% end %>
-
 <%= form_for :user, html: {class: "ui form"} do |f| %>
     <div class="five wide field">
       <%= f.label :name %>

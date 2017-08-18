@@ -1,0 +1,34 @@
+<h1 class="ui dividing header">Attraction</h1>
+
+<div class="ui card">
+  <div class="content">
+    <div class="header">Ride Info</div>
+  </div>
+  <div class="content">
+    <div class="meta">Name</div>
+    <div class="description">
+      <i class="user circle icon"></i><%= @attraction.name %>
+    </div>
+    <div class="meta">Nausea Rating</div>
+    <div class="description">
+      <i class="frown icon"></i><%= @attraction.nausea_rating %>
+    </div>
+    <div class="meta">Happiness Rating</div>
+    <div class="description">
+      <i class="smile icon"></i><%= @attraction.happiness_rating %>
+    </div>
+    <div class="meta">Min. Height</div>
+    <div class="description">
+      <i class="long arrow up icon"></i><%= @attraction.min_height %>
+    </div>
+    <div class="meta">Tickets</div>
+    <div class="description">
+      <i class="ticket icon"></i><%= @attraction.tickets %>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= button_to "Go on this ride", attraction_path(@attraction), class: "fluid ui primary button" %>
+  </div>
+</div>
+
+
