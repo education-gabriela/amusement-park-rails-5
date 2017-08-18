@@ -1,0 +1,5 @@
+<div class="ui three cards">
+  <% @attractions.each do |attraction| %>
+      <%= render partial: "card", locals: {attraction: attraction} %>
+  <% end %>
+</div>

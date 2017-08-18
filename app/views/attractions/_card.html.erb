@@ -1,0 +1,21 @@
+<div class="ui raised link card">
+  <div class="content">
+    <div class="right floated">
+      <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+    </div>
+    <div class="header"><%= attraction.name %></div>
+    <div class="meta">
+      <span class="category"><i class="icon ticket"></i> <%= pluralize(attraction.tickets, "ticket") %></span>
+    </div>
+    <div class="description">
+      <ul>
+        <li>Nausea Rating: <%= attraction.nausea_rating %></li>
+        <li>Happiness Rating: <%= attraction.happiness_rating %></li>
+        <li>Min. Height: <%= attraction.nausea_rating %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction), class: "fluid ui orange button" %>
+  </div>
+</div>
