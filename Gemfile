@@ -45,6 +45,10 @@ group :development, :test do
   gem 'rack_session_access'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'better_errors'
+  gem 'sprockets_better_errors'
+  gem 'binding_of_caller'
+  gem 'simplecov'
 end
 
 group :development do
