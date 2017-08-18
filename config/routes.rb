@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get "/signin", controller: "sessions", action: "new"
   post "/signin", controller: "sessions", action: "create"
+  delete "/signout", controller: "sessions", action: "destroy"
 end

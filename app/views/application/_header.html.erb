@@ -3,6 +3,10 @@
     Amusement Park on Rails 5
   </div>
   <%= link_to "Home", root_path, class: "item" %>
-  <%= link_to "Sign Up", new_user_path, class: "item" %>
-  <%= link_to "Sign In", signin_path, class: "item" %>
+  <% unless logged_in? %>
+      <%= link_to "Sign Up", new_user_path, class: "item" %>
+      <%= link_to "Sign In", signin_path, class: "item" %>
+  <% else %>
+      <%= link_to "Log Out", signout_path, method: "delete", class: "item" %>
+  <% end %>
 </div>

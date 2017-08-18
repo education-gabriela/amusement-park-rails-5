@@ -2,6 +2,9 @@
 
 <div class="ui card">
   <div class="content">
+    <% if is_admin? %>
+        <span class="ui red left floated ribbon label">ADMIN</span>
+    <% end %>
     <div class="header">Your information</div>
   </div>
   <div class="content">
@@ -31,7 +34,7 @@
     </div>
   </div>
   <div class="extra content">
-    <%= link_to "See attraction", attractions_path, class: "ui primary button" %>
+    <%= link_to "See attractions", attractions_path, class: "ui primary button" %>
   </div>
 </div>
 
