@@ -28,7 +28,8 @@
   </div>
   <div class="extra content">
     <%= button_to "Go on this ride", attraction_path(@attraction), class: "fluid ui primary button" unless is_admin?%>
-    <%= link_to "Edit Attraction", edit_attraction_path(@attraction), class: "fluid ui red button" if is_admin? %>
+    <%= link_to "Edit Attraction", edit_attraction_path(@attraction), class: "fluid ui pink button", style: "margin-bottom:10px" if is_admin? %>
+    <%= link_to "Delete Attraction", attraction_path(@attraction), class: "fluid ui red button", method: :delete if is_admin? %>
   </div>
 </div>
 

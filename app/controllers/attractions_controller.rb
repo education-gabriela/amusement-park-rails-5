@@ -1,5 +1,6 @@
 class AttractionsController < ApplicationController
   before_action :is_authenticated?, except: [:index]
+  before_action :can_modify?, except: [:index, :show]
 
   def index
     @attractions = Attraction.order(:name)
@@ -52,9 +53,19 @@ class AttractionsController < ApplicationController
     end
   end
 
+  def destroy
+    @attraction = Attraction.find(params[:id])
+    @attraction.destroy
+    redirect_to attractions_path
+  end
+
   private
 
   def attraction_params
     params.require(:attraction).permit(:name, :nausea_rating, :happiness_rating, :min_height, :tickets)
+  end
+
+  def can_modify?
+    redirect_to attractions_path unless is_admin?
   end
 end

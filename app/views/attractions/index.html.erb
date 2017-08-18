@@ -1,7 +1,9 @@
-<div class="ui segment">
-<%= link_to "New Attraction", new_attraction_path, class: "ui teal button" %>
-</div>
-  <div class="ui three cards">
+<% if is_admin? %>
+    <div class="ui segment">
+      <%= link_to "New Attraction", new_attraction_path, class: "ui teal button" %>
+    </div>
+<% end %>
+<div class="ui three cards">
   <% @attractions.each do |attraction| %>
       <%= render partial: "card", locals: {attraction: attraction} %>
   <% end %>
